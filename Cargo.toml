@@ -1,0 +1,11 @@
+[package]
+name = "SpaTch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rocket = "0.5.1"
+ws = { package = "rocket_ws", version = "0.1.1" }
+rocket_db_pools = { version = "0.1.0-rc.2", features = [ "deadpool_redis" ] }
+arc-swap = "1.7.1"
+futures = "0.3.31"
