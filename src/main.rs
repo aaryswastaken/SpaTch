@@ -53,6 +53,8 @@ async fn push_new_message(message: &str, mut conn: Connection<RedisPool>,
         Err(_) => Err("An error occurred".to_string())
     };
 
+    // TODO: Handle the errors better than an unwrap() that might panic
+
     match new_record {
         Ok(id) => {
             // Broadcast new message to all channels
